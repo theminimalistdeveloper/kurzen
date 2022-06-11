@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "module": "es2015",
+    "declaration": true,
+    "module": "commonjs",
     "moduleResolution": "node",
+    "sourceMap": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "target": "ES2018"
   }
 }
