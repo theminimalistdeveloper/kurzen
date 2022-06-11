@@ -1,11 +1,11 @@
 import { APIGatewayProxyEventV2 } from 'aws-lambda'
 import _ from 'lodash'
 import { handler } from './redirect'
-import { getResponse, getResponseFromError } from '../helpers/response'
-import { getLink } from '../lib/persistence'
+import { getResponse, getResponseFromError } from '../../helpers/response'
+import { getLink } from '../../lib/persistence'
 
-jest.mock('../helpers/response')
-jest.mock('../lib/persistence')
+jest.mock('../../helpers/response')
+jest.mock('../../lib/persistence')
 
 const getResponseMock = getResponse as jest.Mock
 const getResponseFromErrorMock = getResponseFromError as jest.Mock
