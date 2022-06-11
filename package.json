@@ -7,6 +7,8 @@
   "scripts": {
     "test": "jest --silent",
     "test-coverage": "jest --silent --coverage",
+    "build": "tsc --noEmit && node ./scripts/build.js",
+    "deploy": "cdk deploy"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.98",
