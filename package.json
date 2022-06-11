@@ -4,6 +4,10 @@
   "repository": "git@github.com:theminimalistdeveloper/kurzen.git",
   "author": "Rafael Dias <theminimalistdeveloper@gmail.com>",
   "license": "MPL-2.0",
+  "scripts": {
+    "test": "jest --silent",
+    "test-coverage": "jest --silent --coverage",
+  },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.98",
     "@types/jest": "^28.1.1",
