@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": "git@github.com:theminimalistdeveloper/kurzen.git",
   "author": "Rafael Dias <theminimalistdeveloper@gmail.com>",
-  "license": "MIT",
+  "license": "MPL-2.0",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
