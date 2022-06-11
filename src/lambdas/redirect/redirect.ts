@@ -2,7 +2,12 @@ import { APIGatewayProxyResult, APIGatewayProxyEventV2 } from 'aws-lambda'
 import { StatusCodes } from 'http-status-codes'
 import { getResponse, getResponseFromError } from '../../helpers/response'
 import { getLink } from '../../lib/persistence'
-import { AppError, NoSlugError, NotFoundError, InternalError } from '../../errors'
+import {
+  AppError,
+  NoSlugError,
+  NotFoundError,
+  InternalError,
+} from '../../errors'
 
 export const handler = async (
   event: APIGatewayProxyEventV2
