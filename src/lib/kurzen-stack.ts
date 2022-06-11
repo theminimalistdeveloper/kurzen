@@ -8,6 +8,7 @@ import {
   aws_dynamodb as dynamodb,
   aws_lambda as lambda,
 } from 'aws-cdk-lib'
+import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam'
 import path from 'path'
 import { Construct } from 'constructs'
 
@@ -36,6 +37,14 @@ export class KurzenStack extends Stack {
         TABLE_NAME: linkTable.tableName,
       },
     })
+
+    redirectFunction.addToRolePolicy(
+      new PolicyStatement({
+        resources: [linkTable.tableArn],
+        actions: ['dynamodb:GetItem'],
+        effect: Effect.ALLOW,
+      })
+    )
 
     // redirect lambda function url
     const redirectFunctionUrl = redirectFunction.addFunctionUrl({
