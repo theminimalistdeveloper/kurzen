@@ -1,7 +1,6 @@
 {
   "name": "kurzen",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:theminimalistdeveloper/kurzen.git",
   "author": "Rafael Dias <theminimalistdeveloper@gmail.com>",
   "license": "MIT",
