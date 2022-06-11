@@ -4,6 +4,9 @@ require('esbuild')
     bundle: true,
     minify: true,
     outdir: './dist/',
+    platform: 'node',
+    sourcemap: true,
+    treeShaking: true,
     outbase: 'src',
   })
   .catch((e) => {
