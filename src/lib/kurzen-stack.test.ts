@@ -15,6 +15,13 @@ describe('Testing Kurzen stack resources', () => {
       Properties: {
         Handler: 'redirect/redirect.handler',
         MemorySize: 1024,
+        Environment: {
+          Variables: {
+            TABLE_NAME: {
+              Ref: 'linkTable7895A993',
+            },
+          },
+        },
       },
     })
   })

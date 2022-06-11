@@ -16,7 +16,7 @@ export class KurzenStack extends Stack {
     super(scope, id, props)
 
     // database for the links
-    new dynamodb.Table(this, 'cacheTable', {
+    const linkTable = new dynamodb.Table(this, 'linkTable', {
       partitionKey: { name: 'Slug', type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
     })
@@ -32,6 +32,9 @@ export class KurzenStack extends Stack {
       memorySize: 1024,
       runtime: lambda.Runtime.NODEJS_16_X,
       timeout: Duration.seconds(5),
+      environment: {
+        TABLE_NAME: linkTable.tableName,
+      },
     })
 
     // redirect lambda function url
