@@ -24,7 +24,9 @@ export class KurzenStack extends Stack {
     // redirect lambda function
     const redirectFunction = new lambda.Function(this, 'redirectFunction', {
       architecture: lambda.Architecture.ARM_64,
-      code: lambda.Code.fromAsset(path.join(__dirname, '../lambdas/')),
+      code: lambda.Code.fromAsset(
+        path.join(__dirname, '../../dist/lambdas/redirect')
+      ),
       functionName: 'redirect',
       handler: 'redirect.handler',
       memorySize: 1024,
