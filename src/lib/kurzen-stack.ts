@@ -28,7 +28,7 @@ export class KurzenStack extends Stack {
         path.join(__dirname, '../../dist/lambdas/redirect')
       ),
       functionName: 'redirect',
-      handler: 'redirect.handler',
+      handler: 'redirect/redirect.handler',
       memorySize: 1024,
       runtime: lambda.Runtime.NODEJS_16_X,
       timeout: Duration.seconds(5),
