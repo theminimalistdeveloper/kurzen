@@ -13,7 +13,7 @@ describe('Testing Kurzen stack resources', () => {
   test('Redirect function is set', () => {
     templateFromStack.hasResource('AWS::Lambda::Function', {
       Properties: {
-        Handler: 'redirect.handler',
+        Handler: 'redirect/redirect.handler',
         MemorySize: 1024,
       },
     })
