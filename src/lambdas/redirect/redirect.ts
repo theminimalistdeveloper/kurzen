@@ -15,8 +15,6 @@ export const handler = async (
   try {
     const slug = event.rawPath.split('/')[1]
 
-    console.log('slug', slug)
-
     if (!slug) {
       throw new NoSlugError()
     }
@@ -32,7 +30,7 @@ export const handler = async (
       headers: { Location: link.url as string },
     })
   } catch (error) {
-    console.log(error)
+    console.error(error)
     return getResponseFromError(
       error instanceof AppError ? error : new InternalError()
     )
